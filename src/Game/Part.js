@@ -23,7 +23,7 @@ const Part = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:3005/query`);
+        const response = await fetch(`https://guess-game-backend-ug7p.onrender.com/query`);
         const result = await response.json();
         const cityNames = result.map((m) => m.city);
 
@@ -86,7 +86,7 @@ const Part = () => {
   }
 
   const shareOnWhatsApp = () => {
-    const gameLink = `https://yourgame.com/part/${id}`;
+    const gameLink = `https://guess-game-backend-ug7p.onrender.com/part/${id}`;
     const message = `Hey! I scored ${totalScore} points in this game. Can you beat me? Click here to play: ${gameLink}`;
     const whatsappURL = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
 
