@@ -8,13 +8,13 @@ const app=express();
 
 app.use(express.json());
 
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', 'https://guess-game-backend-ug7p.onrender.com');
-    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
-    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-    next();
-  });
-//app.use(cors())
+//app.use((req, res, next) => {
+//    res.header('Access-Control-Allow-Origin', 'https://guess-game-backend-ug7p.onrender.com');
+//    res.header('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE');
+//    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//    next();
+//  });
+app.use(cors())
 
 
 const PORT=3005;
@@ -34,28 +34,8 @@ app.get('/query',async(req,res)=>{
     console.log("jjjjjj",items, items.length,'---------------------------------------------------------------');
     res.json(items)
 })
-// app.get('/posts',async(req,res)=>{
-//     const key = generateCacheKey(req);
-  
-//     const cachedProducts = await client.get(key);
-//     if (cachedProducts) {
-//         console.log('Cache hit');
-//         res.json(JSON.parse(cachedProducts));
-//         return;
-//     }
-//     console.log("cache miss")
-  
-    
-//     const items=await itemModel.find();
-//     if (items.length) {
-//       await client.set(key, JSON.stringify(items));
-//   }
 
-//     //res.json(items);
 
-//     //const cachedrecord=redis.get(items);
-//     res.json(items);
-// })
 
 app.listen(PORT,()=>{
     console.log("app is running");
