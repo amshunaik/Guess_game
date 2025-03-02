@@ -1,0 +1,30 @@
+.title1{
+    font-size: 25px;
+    color:red;
+    font-weight: 600;
+}
+
+.title2{
+    font-size: 20px;
+    font-weight: 400;
+}
+.start-game1{
+    text-align: center;
+    color: white;
+    background-color: rgb(227, 121, 67);
+    height: 40px;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    
+
+    
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    flex-direction: column;
+    height: 100vh; /* Optional: centers in full viewport height */
+}
